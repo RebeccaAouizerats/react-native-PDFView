@@ -1,9 +1,10 @@
 {
   "name": "react-native-view-pdf",
-  "version": "0.3.1",
+  "version": "0.5.5",
   "description": "React native Pdf viewer implementation",
   "main": "src/index.js",
   "scripts": {
+    "prepublish": "./utils/deploy.sh",
     "test": "jest",
     "test-coverage": "jest --coverage",
     "test-coverage-report": "codecov",
@@ -11,7 +12,7 @@
     "flow": "flow"
   },
   "keywords": [
-    "react-native pdf viewer"
+    "react-native react-component pdf viewer view android ios pdf"
   ],
   "author": "Maksym Rusynyk <m.rusynyk@gmail.com>, Sander Frenken <sander.frenken@hotmail.com>",
   "license": "MIT",
@@ -30,6 +31,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "flow-bin": "^0.67.1",
+    "flow-remove-types": "^1.2.3",
     "flow-typed": "^2.4.0",
     "jest": "^22.4.2",
     "react": "^16.2.0",
