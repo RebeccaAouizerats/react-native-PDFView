@@ -32,8 +32,8 @@ public class PDFView extends com.github.barteksc.pdfviewer.PDFView implements
         OnErrorListener,
         OnPageChangeListener,
         AsyncTaskCompleted {
-    public final static String EVENT_ON_LOAD = "onLoad";
-    public final static String EVENT_ON_ERROR = "onError";
+    public final static String EVENT_ON_LOAD = "onLoadSuccess";
+    public final static String EVENT_ON_ERROR = "onErrorRaised";
     public final static String EVENT_ON_PAGE_CHANGED = "onPageChanged";
     private static final String E_NO_RESOURCE = "source is not defined";
     private static final String E_NO_RESOURCE_TYPE = "resourceType is not defined";
