@@ -72,12 +72,16 @@ class PDFView extends React.Component<Props, *> {
       ...remainingProps
     } = this.props;
 
+    console.log(Platform.OS);
+
     if (Platform.OS === 'ios') {
       return <RNPDFView {...remainingProps} onError={this.onError} />;
     } else {
       Object.defineProperty(remainingProps, 'onLoadSuccess',
         Object.getOwnPropertyDescriptor(remainingProps, 'onLoad'));
-        delete remainingProps['onLoad'];
+
+      delete remainingProps['onLoad'];
+      delete remainingProps['onError'];
 
       return <RNPDFView {...remainingProps} onErrorRaised={this.onError}/>;
     }
