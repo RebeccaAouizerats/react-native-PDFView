@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import { Platfrom } from 'react-native';
+import { Platform } from 'react-native';
 import RNPDFView from './RNPDFView';
 
 

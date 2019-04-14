@@ -27,17 +27,17 @@ public class PDFViewManager extends SimpleViewManager<PDFView> {
         return MapBuilder
                 .builder()
                 .put(
-                        "onLoad",
+                        "onLoadSuccess",
                         MapBuilder.of(
                                 "phasedRegistrationNames",
-                                MapBuilder.of("bubbled", "onLoad")
+                                MapBuilder.of("bubbled", "onLoadSuccess")
                         )
                 )
                 .put(
-                        "onError",
+                        "onErrorRaised",
                         MapBuilder.of(
                                 "phasedRegistrationNames",
-                                MapBuilder.of("bubbled", "onError")
+                                MapBuilder.of("bubbled", "onErrorRaised")
                         )
                 )
                 .build();
