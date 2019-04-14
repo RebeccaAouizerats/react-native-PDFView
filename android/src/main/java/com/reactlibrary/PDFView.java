@@ -54,12 +54,12 @@ public class PDFView extends com.github.barteksc.pdfviewer.PDFView implements
 
     @Override
     public void loadComplete(int numberOfPages) {
-        reactNativeEvent("onLoad", null);
+        reactNativeEvent("onLoadSuccess", null);
     }
 
     @Override
     public void onError(Throwable t) {
-        reactNativeEvent("onError", "error: " + t.getMessage());
+        reactNativeEvent("onErrorRaised", "error: " + t.getMessage());
     }
 
     @Override

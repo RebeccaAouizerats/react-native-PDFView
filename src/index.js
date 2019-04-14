@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-
+import { Platfrom } from 'react-native';
 import RNPDFView from './RNPDFView';
 
 
@@ -71,7 +71,16 @@ class PDFView extends React.Component<Props, *> {
       onError,
       ...remainingProps
     } = this.props;
-    return <RNPDFView {...remainingProps} onError={this.onError} />;
+
+    if (Platform.OS === 'ios') {
+      return <RNPDFView {...remainingProps} onError={this.onError} />;
+    } else {
+      Object.defineProperty(remainingProps, 'onLoadSuccess',
+        Object.getOwnPropertyDescriptor(remainingProps, 'onLoad'));
+        delete remainingProps['onLoad'];
+
+      return <RNPDFView {...remainingProps} onErrorRaised={this.onError}/>;
+    }
   }
 }
 
