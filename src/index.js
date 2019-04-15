@@ -1,10 +1,6 @@
 /* @flow */
 import React from 'react';
 import { Platform } from 'react-native';
-<<<<<<< HEAD
-=======
-
->>>>>>> dev
 import RNPDFView from './RNPDFView';
 
 export type UrlProps = {
